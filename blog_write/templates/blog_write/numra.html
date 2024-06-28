@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Qytetërimet
+{% endblock %}
+
+{% block css_files %}
+    <link rel = "stylesheet" href = {% static "blog_write/numra.css" %}>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+    <h2 class = 'num_verify'>Verify User</h2>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="{% url 'numra' %}" method="post" class="forma_plotsuese">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.non_field_errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+{% endblock %}

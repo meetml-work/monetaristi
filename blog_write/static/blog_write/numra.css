@@ -1,0 +1,64 @@
+
+
+
+
+
+/* 
+
+<h2>Verify User</h2>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<form action="{% url 'numra' %}" method="post" class="forma_plotsuese">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+
+*/
+
+html *::selection{
+    background-color: rgb(20, 254, 254);
+    color: black;
+}
+
+html, body{
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    background-color:  rgb(242, 242, 241);
+}
+
+h2.num_verify{
+    padding-left: 20%;
+    padding-top: 10%;
+}
+
+.messages{
+    padding-left: 21%;
+}
+
+.forma_plotsuese{
+    margin: 5% auto;
+    padding-left: 20%;
+    border: 1px black;
+}
+
+.contact{
+  display: none
+}
+
+#about{
+ display: none
+}

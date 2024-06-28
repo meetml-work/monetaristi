@@ -1,0 +1,793 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+
+h1.germania-one-regular {
+    font-size: 40px;
+    font-family: "Germania One", system-ui;
+    font-weight: 900;
+    font-style: normal;
+    height: fit-content;
+  }
+
+h2.germania-one-regular{
+    font-size: 36px;
+    font-family: "Germania One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center; /* Vertically center the text inside h2 */
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-inline-start: 7px;
+    line-height: normal;
+  }
+
+/* This will center the .main_brand section on the page */
+#main_brand {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Adjust this as needed */
+    align-items: center;
+    position: relative;
+    margin: auto;
+    min-height: 0.99px;
+    margin-bottom: 15px;
+}
+
+#main_brand::before,
+#main_brand::after {
+    content: '';
+    position: absolute;
+    justify-content: center;
+    left: 5%; /*Centers the line to 80% width */
+    right: 5%; /*Centers the line to 80% width */ 
+    height: 1px; /* Thickness of the border */
+    background-color: rgba(100, 93, 93, 0.5); /* Light black using RGBA */
+    
+}
+
+#main_brand::before {
+    top: 0; /* Position at the top of the container */
+}
+
+#main_brand::after {
+    bottom: 0; /* Position at the bottom of the container */
+}
+
+@media (max-width: 1024px) { /* Example breakpoint for mobile devices */
+    #main_brand::before
+    #main_brand::after {
+        width: 90%; /* Set the width of the bottom border */
+        position: absolute;
+        margin: auto; /* This will not have an effect due to absolute positioning, but it's here for clarity */
+        height: 0.99px;
+    }
+}
+
+.collection_header {
+    width: 100%; /* Or any specific width */
+    display: flex;
+    justify-content: center; /* Center the child elements */
+}
+
+.signiture_picture{
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.signiture_picture img {
+    height: 400px; 
+    padding-top: 25px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+/* Center the text of h1 and h2 and set their heights */
+h1, h2 {
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    /* padding-top: 2vh;  */
+    padding-bottom: 0;  
+}
+
+
+@media screen and (max-width: 1024px) {
+    #main_brand {
+        width: auto;
+        height: auto; /* Adjust the height to fit content */
+        gap: 7px;
+    }
+    .signiture_picture img {
+        height: 100%;
+        margin-top: auto;
+        padding-top: auto;
+         /* Maintain aspect ratio while scaling */
+        /* Optionally, you can set a max-height if you find the image becomes too tall on narrow screens */
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    h1, h2 {
+        line-height: 20px;
+        margin-top: 10px;
+        margin-bottom: 3px; /* Slightly less space on smaller screens */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 20px;
+        margin-bottom: auto;
+    }
+    h2 {
+        line-height: 25px;
+        font-size: 18px;
+        font-style: italic;
+        margin-bottom: 35px; 
+    }
+    .signiture_picture {
+        margin-top: auto; /* Slightly less space on smaller screens */
+    }
+
+    .signiture_picture img{
+        margin-top: auto; /* Slightly less space on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .signiture_picture {
+        margin-top: auto; /* Slightly less space on smaller screens */
+    }
+    .signiture_picture img{
+        margin-top: 48px; /* Slightly less space on smaller screens */
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #main_brand {
+        width: auto;
+        height: auto; /* Adjust the height to fit content */
+        gap: 7px;
+    }
+    .signiture_picture img {
+        height: auto;
+        margin-top: auto;
+        padding-top: auto;
+    }
+}
+
+/* 
+    ARTICLES. STARTS BELOW.
+        ARTICLES. STARTS BELOW.
+            ARTICLES. STARTS BELOW.
+                ARTICLES. STARTS BELOW.
+                    ARTICLES. STARTS BELOW.
+                        ARTICLES. STARTS BELOW.
+                            ARTICLES. STARTS BELOW.
+                                ARTICLES. STARTS BELOW.
+
+*/
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list{
+    list-style-type: none;
+}
+
+#latest-post{
+    flex-grow: 1;
+    flex-basis: 80%;
+    flex: 0 0 80%;
+    /* padding-right: 10px; */
+    flex-wrap: wrap; 
+    /* width: 100%; */
+}
+
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+
+.sidebar {
+    
+    flex-grow: 0;
+    flex-basis: 80%;
+    flex: 0 0 20%;
+    margin: 0 auto;
+    height: 50vh;
+    margin-left: 20px;
+    margin-top: 15px;
+    overflow: auto;
+}
+
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+/* ADVERTISEMENT */
+
+
+.post {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap as needed */
+    align-items: flex-start; /* Aligns items at the start of the flex container */
+    margin-bottom: 10px;
+}
+
+.post{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 35px;
+    grid-template-areas:
+        "title image"
+        "content image";  
+    padding-bottom: 25px;
+} 
+
+.post-title h4{
+    display: inline-block;
+    margin: 0;
+}
+
+.post-title{
+    display: inline;
+    margin-top: 0px;
+    padding-left: auto;
+}
+
+.Image_image{
+    grid-area: image;
+}
+
+.article-content{
+    grid-area: content;
+}
+
+.article-content h5{
+    display: inline-block;
+    margin: 0;
+}
+
+.topic_time{
+    display: flex; 
+    align-items: center;
+    justify-content: first baseline;
+    gap: 20px;
+    padding-top: -5px;
+}
+
+.post .bold{
+    color: rgb(169, 4, 4);
+    
+}
+
+.post .Image_image{
+    width: 220px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.post .Image_image .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-left: 5px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    font-size: 0.7rem; /* Adjust based on your design */
+    display: block; /* Ensures overlay text is always shown */
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.post-title, .article-content{
+    margin: 0;
+}
+
+.article-content .topic_time{
+    margin-top: -25px;
+}
+
+
+.post h4.germania-one-regular {
+    font-family: "Germania One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.post h5.im-fell-english-regular {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.post h6.im-fell-english-regular {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.post p.im-fell-english-regular {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.post .data{
+    font-weight: normal;
+}
+
+.post-title{
+    margin-top: -5px;
+    font-size: 28px;
+}
+
+#latest-post .pagination {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center; /* Centers horizontally in the flex container */
+    align-items: center; /* Centers vertically in the flex container */
+    height: 100px; /* Adjust the height as needed for your design */
+    width: 100%; /* Ensure the div takes up the full width available */
+}
+
+#latest-post .show-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(20, 254, 254); /* Example: blue background */
+    color: black; /* White text */
+    text-decoration: none; /* Removes underline from link */
+    font-weight: bold; /* Makes the text bold */
+    border-radius: 7px; /* Rounds the corners of the button */
+    border: none; /* Removes any default border */
+    text-align: center; /* Ensure text is centered */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background color change and transform on hover */
+}
+
+#latest-post .show-more:hover, .show-more:focus {
+    background-color: rgb(1, 199, 183); /* Darker blue on hover/focus */
+    transform: scale(1.05); /* Slightly enlarges the button on hover/focus */
+    color: black; /* Ensures text color remains white */
+    text-decoration: none; /* Keeps the text underline removed on hover/focus */
+}
+
+
+@media (max-width: 1350px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 65%;
+        padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .container ul{
+        list-style-type: none; /* Removes default bullet points */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #latest-post{
+        flex: 0 0 80%;
+        order: 1;
+    }
+
+    .sidebar{
+        flex: 0 0 80%;
+        order: 2;
+    }
+
+    #latest-post, .sidebar{
+        flex-basis: auto;
+        width: 100%;
+        /* padding: 10px;  */
+    }
+
+    .post .Image_image{
+        width: 199px;
+        height: 140px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 5px;
+        margin-left: auto;
+    }
+    
+    .post{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 5px; 
+        grid-template-areas:
+            "title image"
+            "content image";
+    } 
+    .post-title{
+        grid-area: title;
+    }
+
+    .Image_image{
+        grid-area: image;
+    }
+
+    .article-content{
+        grid-area: content;
+    }
+
+    .topic_time{
+        padding: 0;
+        margin-top: -15px;
+    }
+    .post h4{
+        font-size: 37px;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+        padding-top: 0;
+          }
+    
+    .post h5{
+        font-size: 16px;
+        line-height: normal;
+    }
+    .post h6{
+        font-size: 14px;
+        line-height: normal;
+    }
+
+
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+    .container .sidebar{
+        display: none;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10%;
+        height: 150px;
+        overflow: auto; 
+        width: 100%;
+        box-sizing: border-box;
+        border: 5px solid black;
+    } 
+
+    
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+}
+
+@media (min-width: 700px) and (max-width: 850px) {
+
+    .container ul{
+        list-style-type: none; /* Removes default bullet points */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .post .Image_image{
+        width: 170px;
+        height: 110px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 5px;
+        margin-left: auto;
+    }
+    .post .Image_image .overlay-text {
+        position: absolute;
+        bottom: 0;
+        left: 7px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 5px;
+        padding-right: 7px;
+        font-size: 0.7rem; /* Adjust based on your design */
+        display: block; /* Ensures overlay text is always shown */
+        border-radius: 5px;
+        flex-wrap: wrap;
+    }
+    .post{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 10px; 
+        grid-template-areas:
+            "title title"
+            "content image";
+    } 
+    .post-title{
+        grid-area: title;
+    }
+    .Image_image{
+        grid-area: image;
+    }
+
+    .article-content{
+        grid-area: content;
+    }
+    
+
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+
+    .container .sidebar{
+        display: none;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10%;
+        height: 150px;
+        overflow: auto; 
+        width: 100%;
+        box-sizing: border-box;
+    } 
+
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+}
+
+@media (min-width: 550px) and (max-width: 699px){
+
+    .container ul{
+        list-style-type: none; /* Removes default bullet points */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        padding-top: 10px;
+        /* padding-left: 20px; */
+    }
+
+    .container{
+        width: 90%;
+        margin-left: 35px;
+        margin-right: auto;
+        box-sizing: border-box; 
+    }
+
+
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+    .container .sidebar{
+        display: none;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 10%;
+        height: 150px;
+        overflow: auto; 
+        width: 100%;
+        box-sizing: border-box;
+        overflow: auto; 
+    }   
+    
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+
+} 
+
+@media (min-width: 0px) and (max-width: 549px){
+    .container, .sidebar, .post, .post .Image_image{
+        width:100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .content ul {
+        list-style-type: none; /* Removes default bullet points */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+    .sidebar{
+        display: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 150px;
+        box-sizing: border-box;
+    } 
+
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+    /* ADVERTISEMENT */
+
+    .post{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title title"
+            "image image"
+            "content content"; 
+        width: 100%;  
+        margin-bottom: 7%;
+    } 
+
+    .post .post-title, .article-content {
+        margin-bottom: 0;
+        padding-top: 5px;
+        width: 100%;
+    }
+
+    .post-title {
+        grid-area: title;
+        margin-bottom: 2px;
+        margin-right: 10px;
+    }
+
+    .post .Image_image{
+        grid-area: image;
+        margin-bottom: 2px;
+        width: auto;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .post .article-content{
+        display: flex;
+        flex-direction: column;
+        grid-area: content;
+        padding-top: 5px;
+        padding-left: 15px;
+        width: 100%;
+        width: auto;
+        padding-right: 10px;
+    }
+
+    .post .post-title{
+        padding-left: 15px;
+        padding-right: 10px;
+        width:93%
+    }
+
+    .article-content {
+        display: flex;
+        flex-direction: column;
+        grid-area: content;
+        margin-right: 0;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        max-width: 100%;
+        padding-top: 5px;
+    }
+
+    .article-content .excerpt{
+        display: block;
+        overflow: hidden;
+        overflow: visible;
+        padding-bottom: 6px;
+        margin-bottom: 20px;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .topic_time{
+        width: auto;
+        height:auto;
+    }
+    .topic_time > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+.post h4::selection, .post .overlay-text::selection, .post h5::selection, .post h5::selection, .post h6::selection, .post p::selection, .post a::selection, .post .bold::selection {
+    background-color: rgb(20, 254, 254);
+    color: black;
+  }
+
+#latest-post .show-more::selection{
+    background-color: rgb(20, 254, 254);
+    color: black;
+  }
+
+.topic_time .bold{
+    font-weight: bold;
+    line-height: 0%;
+}
+
+.post .time{
+    font-weight: normal;
+}
+
+.post .article_link:hover .title,
+.post .article_link:focus .title{
+    color: rgb(136, 136, 136);
+}
+
+.post .author:hover, 
+.post .author:focus{
+    color: rgb(136, 136, 136);
+}
+
+
+  
+
+#main_brand .collection_header img::selection{
+    background-color:  rgb(20, 254, 254);
+    color: black;
+  }
+
+#main_brand h1::selection {
+    background-color: rgb(20, 254, 254);
+    color: black;
+  }
+  
+#main_brand h2::selection {
+    background-color: rgb(0, 254, 254);
+    color: black;
+  }
+
+input::selection, 
+textarea::selection {
+    background-color:  rgb(0, 254, 254);
+    color: black;
+  }

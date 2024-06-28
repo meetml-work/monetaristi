@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Qytetërimet
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Germania+One&family=IM+Fell+English&display=swap">
+    <link rel = "stylesheet" href = {% static "blog_write/full_article.css" %}>
+{% endblock %}
+
+
+{% block content %}
+        
+    <section id = 'fa_all'>
+        <section id = 'fa_article_content'>
+            <div class='fa_article_letters'>
+                <h2 class= 'fa_title_ germania-one-regular'>{{ article_full.title }}</h2>
+                <h6 class='fa_excerpt im-fell-english-regular'> {{ article_full.excerpt }}</h6>
+                <p class='fa_author im-fell-english-regular'>Autor:<a href = "{% url 'about' %}"> {{ article_full.author.full_name }} </a></p>
+                <p class='fa_time im-fell-english-regular'>Data: {{ article_full.created_at|date:"d.m.Y" }}</p>
+            </div>    
+            <div class='fa_image' style="background-image: url('{{article_full.image.url}}');"></div>
+        </section>
+        <section id="fa_sidebar">
+            <div id="fa_advertisement">
+                <!-- Example image advertisement -->
+                {% comment %} <img src="path/to/advertisement.jpg" alt="Advertisement">
+
+                <!-- Example video advertisement -->
+                <video controls>
+                    <source src="path/to/advertisement.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> {% endcomment %}
+            </div>
+        </section>
+   
+    </section>
+    
+    <div class='fa_full_article_content'>
+        <p class = 'fa_main_content im-fell-english-regular'> {{article_full.content|safe}} </p>         
+    </div> 
+
+    <section id="fa_second_sidebar">
+        <div id="fa_second_advertisement">
+            <!-- Example image advertisement -->
+            {% comment %} <img src="path/to/advertisement.jpg" alt="Advertisement">
+
+            <!-- Example video advertisement -->
+            <video controls>
+                <source src="path/to/advertisement.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> {% endcomment %}
+        </div>
+    </section>
+   
+{% endblock %}
+
+
+
+
+

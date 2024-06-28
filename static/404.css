@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+  }
+
+
+  html {
+    font-family: 'Open Sans', 'Lato', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+  }
+
+  
+  h5{
+    font-family: 'Lato', sans-serif;
+  }
+
+
+.under_construction {
+    text-align: center;
+    position: relative;
+}
+
+.diamond {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+
+h3, p {
+    position: relative;
+    z-index: 1; /* Ensure text is above the rotating diamond */
+}

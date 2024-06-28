@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Civilisation
+{% endblock %}
+
+{% block css_files %}
+    <link rel = "stylesheet" href = {% static "blog_write/statistika.css" %}>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class='stat_main'>
+        <h2 class='stat_clicks'>Clicks by Type</h2>
+        <ul>
+        {% for click in clicks_by_type %}
+            <li>{{ click.click_by_type }}: {{ click.total }}</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Individual Clicks</h2>
+        <ul>
+        {% for click in individual_clicks %}
+            <li>{{ click.ip_address }} clicked on {{ click.url }} at - {{ click.timestamp }}</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Clicks by IP Address</h2>
+        <ul>
+        {% for click in clicks_by_ip %}
+            <li>{{ click.ip_address }}: {{ click.total }}</li>
+        {% endfor %}
+        </ul>
+
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class='show-less'>Show Less</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="show-more">Show More</a>
+            {% endif %}
+        </div>
+
+        <div class='stat_button'>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class='stat_logout'>Log Out</button>
+            </form>
+        </div>    
+    </div>
+    
+
+{% endblock %}

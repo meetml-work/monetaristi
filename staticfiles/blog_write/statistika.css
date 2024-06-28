@@ -1,0 +1,102 @@
+.stat_main{
+    margin-top: 2%;
+    margin-left: 1%;
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 90vh;
+}
+
+html *::selection{
+    background-color: rgb(20, 254, 254);
+    color: black;
+}
+
+h2.ul{
+    line-height: 25px;
+}
+
+.pagination{
+    margin-top: 30px;
+    margin-bottom: 50px; 
+    text-align: center;
+}
+
+a.show-more{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: rgb(1, 199, 183); 
+    color: black; /* White text */
+    font-weight: bold; /* Makes the text bold */
+    border-radius: 7px; /* Rounds the corners of the button */
+    border: none; /* Removes any default border */
+    text-align: center; /* Ensure text is centered */
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+a.show-less{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: rgb(1, 199, 183); 
+    color: black; /* White text */
+    font-weight: bold; /* Makes the text bold */
+    border-radius: 7px; /* Rounds the corners of the button */
+    border: none; /* Removes any default border */
+    text-align: center; /* Ensure text is centered */
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.pagination .show-more:hover, .show-more:focus,
+.pagination .show-less:hover, .show-less:focus {
+    background-color: rgb(20, 254, 254);
+    /* Darker blue on hover/focus */
+    transform: scale(1.05); /* Slightly enlarges the button on hover/focus */
+    color: black; /* Ensures text color remains white */
+    text-decoration: none; /* Keeps the text underline removed on hover/focus */
+}
+
+.stat_button{
+    margin: 5% auto;
+
+}
+
+.stat_button .stat_logout{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: grey;
+    color: black; /* White text */
+    font-weight: bold; /* Makes the text bold */
+    border-radius: 7px; /* Rounds the corners of the button */
+    border: none; /* Removes any default border */
+    text-align: center; /* Ensure text is centered */
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.stat_button .stat_logout:hover, .stat_logout:focus{
+    background-color: rgb(255, 255, 255);
+    /* Darker blue on hover/focus */
+    transform: scale(1.05); /* Slightly enlarges the button on hover/focus */
+    color: black; /* Ensures text color remains white */
+    text-decoration: none; /* Keeps the text underline removed on hover/focus */
+}
+
+#about{
+    display: none;
+}
+
+.contact{
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .stat_main {
+        margin-left: 5%; /* Adjust the left margin for smaller screens */
+        margin-right: 5%; /* Add some right margin for smaller screens */
+    }
+}
+
+
+

@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} 
+        {% endblock %}
+    </title>
+    <link rel = "stylesheet" href = {% static "base.css" %}>
+    {% block css_files %} 
+    {% endblock %}
+    
+</head>
+
+<body>
+    <header>
+        <div class="header_title"> 
+            <a href = "{% url 'starting-page' %}">Qytetërimet</a>
+        </div>
+    </header>
+        <div class="ad-container">
+            {% comment %} advertisement content goes here {% endcomment %}
+        </div>
+{% comment %} {% static "{% static "    <section id = "about">
+        <div class="prezantim">
+            <a href = "{% url 'about' %}">
+                Rreth Autorit
+            </a>
+        </div>
+    </section>" %}" %} {% endcomment %}
+
+
+
+    {% block content %}
+    {% endblock %}
+
+    <section id = "about">
+        <div class="prezantim">
+            <a href = "{% url 'about' %}">
+                Rreth Autorit
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="contact">
+            <p>Email: agon.ajrula@gmail.com<p>
+        </div>
+    </footer> 
+</body>
+</html>
+
+
+
+
+
+

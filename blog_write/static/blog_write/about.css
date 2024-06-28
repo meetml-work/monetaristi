@@ -1,0 +1,33 @@
+html, body{
+    overflow-x: hidden;
+}
+
+html *::selection{
+    background-color: rgb(20, 254, 254);
+    color: black; 
+}
+
+.introduction{
+    border: 2px black;
+}
+
+.une_jam{
+    margin-left: 10px;
+    margin-top: 10%;
+    display: flex;
+    align-items: flex-start; /* Aligns items at the start of the container */
+    border: 2px black;
+}
+
+
+#about{
+    display: none;
+}
+
+.contact{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Additional styling */
+}
+

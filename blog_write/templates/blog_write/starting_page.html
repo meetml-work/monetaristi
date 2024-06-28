@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Qytetërimet
+{% endblock %}
+
+{% block css_files %}
+    <link rel = "stylesheet" href = {% static "blog_write/starting_page.css" %}>
+{% endblock %}
+
+{% block content %}
+
+        <section id = "main_brand">
+            <div class = "collection_header">
+                <picture class = "signiture_picture" tabindex = 0>
+                    <img src = "{% static "blog_write/images/DALL·E 2024-02-03 02.50.15 - Revise the previous illustration of Ionic architecture to incorporate caryatids—sculpted female figures—as pillar holders, in a lighter and more refin.webp" %}" alt = "brand_signiture">
+                </picture>
+            </div>
+                {% comment %} <h1 class="germania-one-regular">Qytetërimet</h1> {% endcomment %}
+                <h2 class="germania-one-regular">Prizma e Historisë mbi Syrin e Monedhës</h2>
+        </section> 
+
+        <div class="container">
+            <section id="latest-post" class="content">
+                <ul>
+                    {% for article in page_obj.object_list %}
+                        {% include "blog_write/includes/posts.html" %}
+                    {% endfor %}
+                </ul>    
+                <div class="pagination">
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="show-more">Show More</a>
+                    {% endif %}
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div id="advertisement">
+                    <!-- Example image advertisement -->
+                    {% comment %} <img src="path/to/advertisement.jpg" alt="Advertisement">
+
+                    <!-- Example video advertisement -->
+                    <video controls>
+                        <source src="path/to/advertisement.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> {% endcomment %}
+                </div>
+
+            </aside>
+        </div>
+   
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

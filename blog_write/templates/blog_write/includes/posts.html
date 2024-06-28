@@ -1,0 +1,37 @@
+
+{% load static %}
+
+<li class="list">
+
+    <article class="post">
+        <div class="post-title">
+            <a href="{% url 'full_article' slug=article.slug %}" class="article_link">
+                <h4 class="title germania-one-regular">{{ article.title }}</h4>
+            </a>
+        </div>
+            {% comment %} <a href = "{% url 'full_article' slug=article.slug %}" class="Image_image" style="background-image: url('{{ article.image.url }}');" tabindex="0">
+                <div class="overlay-text">Rrëniet dhe Ngritjet</div>
+            </a> {% endcomment %}
+            <div class="Image_image" style="background-image: url('{{ article.image.url }}');" tabindex="0">
+                <div class="overlay-text">Qytetërimet</div>
+            </div>
+        <div/>
+        <div class="article-content">
+            {% comment %} <a href = "{% url 'full_article' slug=article.slug %}"> {% endcomment %}
+            <h5 class="excerpt im-fell-english-regular">{{ article.excerpt }}</h5>
+            {% comment %} </a>  {% endcomment %}
+            <div class="topic_time">
+                <p class="authors im-fell-english-regular">
+                    Tema: <span class="bold">{% for tag in article.tags.all %} {{tag.caption}} {% endfor %} </span>
+                </p>
+                <h6 class="data">Data: {{ article.created_at|date:"d.m.Y" }}</h6>
+            </div>
+        </div>
+    </article>
+
+</li>
+
+{% comment %} {% endfor %} <a href="{% url 'about' %}" class="author im-fell-english-regular">{{ article.author.full_name }}</a> {% endcomment %} 
+
+
+

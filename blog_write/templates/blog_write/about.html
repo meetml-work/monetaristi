@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href = {% static "blog_write/about.css" %}>
+{% endblock %}
+
+{% block content %}
+<div class="introduction">
+    <div class="une_jam">
+        {% for biography in biography_full %}
+            <p> {{ biography.ContentBiography|safe }} </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% load static %}
+
+
+{% block title %}
+    404 html
+{% endblock %}
+
+{% block css_files %}
+    <link rel = "stylesheet" href = {% static "404.css" %}>
+{% endblock %}
+
+{% block content %}
+    <div class = "under_construction">
+        <div class = "diamond"></div>
+        <h2>Under Construction</h2>
+        <p>We're working hard to improve our website and we'll be ready to launch soon. Thank you for your patience!</p>
+    </div>
+{% endblock %}
