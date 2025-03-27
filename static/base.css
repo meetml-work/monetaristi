@@ -47,8 +47,8 @@ header {
     height: 70px; /* Adjust as needed */
     border-bottom: 1px solid black;
     box-shadow: 0 2px 5px black; /* Adds slight shade below the header */
-    background-color: #212121; 
-    color:  rgb(252, 238, 225);
+    background-color: black;
+    color:  white;
     position: fixed; /* Fixes the header at the top of the viewport */
     top: 0; /* Aligns the header at the top edge of the viewport */
     left: 0; /* Aligns the header at the left edge of the viewport */
@@ -68,12 +68,43 @@ header {
 .header_title a {
   text-align: center;
   color:  rgb(252, 238, 225);
-  background-color:  #212121;
+  background-color:  black;
   font-weight: bold; /* Make text bold */
   font-size: 30px;
   text-decoration: none;
 }
 
+.header_title{
+  font-family: "IM Fell English SC", serif;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  margin: auto;
+}
+
+.header_title a {
+  text-align: center;
+  color:  rgb(252, 238, 225);
+  background-color:  black;
+  font-weight: bold; /* Make text bold */
+  font-size: 35px;
+  text-decoration: none;
+}
+
+@media (max-width: 1220px) {
+  .header_title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+  }
+
+  .header_title a {
+    display: block;
+    width: 98%;
+    text-align: center;
+  }
+}
 
 .ad-container {
     padding: 20px;
@@ -145,6 +176,8 @@ textarea::selection {
   background-color:  rgb(0, 254, 254);
   color: black;
 }
+
+
 
 @media (min-width: 0px) and (max-width: 549px){
       .contact{

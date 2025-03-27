@@ -1,0 +1,36 @@
+# Bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# SQLite DB file (optional: if you want a clean container DB)
+db.sqlite3
+
+# Environment files (secrets & configs)
+.env
+*.env
+
+# Django static collection output (if using collectstatic)
+staticfiles/
+static/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore

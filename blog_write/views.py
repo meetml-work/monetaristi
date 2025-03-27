@@ -13,6 +13,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from django.views.decorators.http import require_POST
 from django.utils import timezone
+from django.utils.html import mark_safe
+
 
 
 
@@ -65,12 +67,22 @@ def top_five(request):
         "latest_articles": latest_articles
     })
     
+def clean_text(text):
+    return mark_safe(text.replace('&nbsp;', ' '))
+
+    
 def about(request):
     biography_full = Biography.objects.all()
     log_click(request, click_by_type='Article', url=request.build_absolute_uri())
+    
+    # Pastrimi i tekstit
+    for bio in biography_full:
+        bio.ContentBiography = clean_text(bio.ContentBiography)
+    
     return render(request, "blog_write/about.html",{
         'biography_full': biography_full
     })
+
 
 def article_create_view(request):
     if request.method == 'POST':

@@ -6,7 +6,7 @@ html, body {
 }
 
 h1.germania-one-regular {
-    font-size: 40px;
+    font-size: 50px;
     font-family: "Germania One", system-ui;
     font-weight: 900;
     font-style: normal;
@@ -16,7 +16,7 @@ h1.germania-one-regular {
 h2.germania-one-regular{
     font-size: 36px;
     font-family: "Germania One", system-ui;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     align-items: center; /* Vertically center the text inside h2 */
     justify-content: center;
@@ -80,7 +80,7 @@ h2.germania-one-regular{
 }
 
 .signiture_picture img {
-    height: 400px; 
+    height: 600px; 
     padding-top: 25px;
     padding-bottom: 15px;
     width: 100%;
@@ -323,6 +323,7 @@ h1, h2 {
     font-family: "IM Fell English", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 22px;
 }
 
 .post h6.im-fell-english-regular {
@@ -335,6 +336,7 @@ h1, h2 {
     font-family: "IM Fell English", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 17px;
 }
 
 .post .data{
@@ -675,6 +677,10 @@ h1, h2 {
         width: 100%;
     }
 
+    /* .post h5.article-content {
+        font-size: 15px;
+    } */
+
     .post-title {
         grid-area: title;
         margin-bottom: 2px;
@@ -728,13 +734,27 @@ h1, h2 {
         width: 100%;
     }
 
+    .article-content h5.excerpt{
+        font-size: 18px;
+    }
+
     .topic_time{
         width: auto;
         height:auto;
     }
+
+    .topic_time p.authors{
+        font-size: 18px;
+    }
+
     .topic_time > * {
         margin-top: 0;
         margin-bottom: 0;
+        font-size: 15px;
+    }
+
+    .topic_time h6.data{
+        font-size: 18px;
     }
 
 }
@@ -768,8 +788,6 @@ h1, h2 {
     color: rgb(136, 136, 136);
 }
 
-
-  
 
 #main_brand .collection_header img::selection{
     background-color:  rgb(20, 254, 254);

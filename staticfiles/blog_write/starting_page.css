@@ -35,7 +35,7 @@ h2.germania-one-regular{
     position: relative;
     margin: auto;
     min-height: 0.99px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
 }
 
 #main_brand::before,
@@ -65,7 +65,7 @@ h2.germania-one-regular{
         width: 90%; /* Set the width of the bottom border */
         position: absolute;
         margin: auto; /* This will not have an effect due to absolute positioning, but it's here for clarity */
-        height: 0.99px;
+        height: 0.99px; 
     }
 }
 
@@ -81,7 +81,7 @@ h2.germania-one-regular{
 }
 
 .signiture_picture img {
-    height: 400px; 
+    height: 300px; 
     padding-top: 25px;
     padding-bottom: 15px;
     width: 100%;
