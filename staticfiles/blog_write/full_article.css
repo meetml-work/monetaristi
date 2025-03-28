@@ -1,46 +1,9 @@
-/* 
-
-<section id = 'fa_all'>
-    <section id = 'fa_article_content'>
-
-        <div class='fa_article_letters'>
-            <div class='fa_title_container'><h2 class= 'fa_title_'>{{article_full.title}}</h2></div>
-            <div class='fa_excerpt_container'><h6 class='fa_excerpt'> {{article_full.excerpt}}</h6></div>
-            <div class='fa_author_container'><p class='fa_author'>Nga {{articlle_full.author.full_name}} </p></div>
-            <div class='fa_date_container'><p class='fa_time'>Data: {{article_full.created_at}}</p></div>
-        </div>
-
-        <div class='fa_image'>
-            <img src={{article_full.image.url}} alt= {{article_full.title}}>
-        </div>
-
-    </section>
-    <section id="fa_sidebar">
-        <div id="fa_advertisement">
-            <!-- Example image advertisement -->
-            {% comment %} <img src="path/to/advertisement.jpg" alt="Advertisement">
-
-            <!-- Example video advertisement -->
-            <video controls>
-                <source src="path/to/advertisement.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video> {% endcomment %}
-        </div>
-    </section>
-<section>
-
-<main>
-    {{article_full.content|safe}}
-</main>
-
-*/
-
 html, body{
     overflow-x: hidden;
     margin: 0 auto;
     padding: 0 auto;
     width:100%;
-    background-color:  white;
+    background-color:  rgb(242, 242, 241);
 }
 
 
@@ -50,45 +13,42 @@ html, body{
     align-items: flex-start; /* Aligns items at the start of the flex container */
 }
 
-
 #fa_article_content{
-    padding-top: 25px;
-    margin-top: 31px;
     display: grid;
-    grid-template-columns: 2fr 3.5fr;
+    grid-template-columns: 2fr 3fr;
     grid-column-gap: 10px;
     grid-template-areas:
         "letters image"; 
-    padding-bottom: 20px;
+    padding: 20px 20px;
     background-color: black;
-    min-height: 850px;
-    margin-bottom: 0;
+    margin: 31px 0 0;
     overflow: hidden;
+    min-height: 92vh;
 } 
 
 .fa_image{
     margin-right: 20px;
     margin-left: auto;
     grid-area: image;
-    min-width: 80%;
-    height: 100%;
+    min-width: 90%;
+    min-height: 90vh; 
     width: auto;
     background-size: cover; 
     background-position: center; 
     border-radius: 8px;
-}
+}  
 
 
 .fa_article_letters{
     background-color: black;
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
     grid-area: letters;
-    margin-left: auto;
     height: 100%;
-    width: 90%;
+    width: 100%; 
     color: white;
 }
 
@@ -97,15 +57,16 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 .fa_article_letters .fa_excerpt{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 30px;
 }
+
 
 .fa_article_letters h2,
 .fa_article_letters h6,
@@ -128,7 +89,7 @@ html, body{
     margin-top: 0;
     margin-bottom: 5.5%;
     margin-left: 20%;
-    margin-right: 35%;
+    margin-right: 20%;
 }
 
 .fa_main_content {
@@ -142,24 +103,37 @@ html, body{
     color: red;
 }
 
-
 .fa_article_letters h2.germania-one-regular {
     font-family: "Germania One", system-ui;
-    font-weight: 400;
+    font-weight: 400px;
+    font-size: 36px;
 }
+
+
+.fa_article_letters .fa_excerpt.im-fell-english-regular{
+    font-family: "IM Fell English", serif;
+    font-size: 22px; /* Adjust the font size as needed */
+}
+
 
 .fa_article_letters h6.im-fell-english-regular,
 .fa_article_letters .fa_author.im-fell-english-regular,
 .fa_article_letters .fa_time.im-fell-english-regular {
     font-family: "IM Fell English", serif;
-    font-weight: 400;
+    font-weight: 300px;
     font-style: normal;
 }
 
+.fa_article_letters .fa_author.im-fell-english-regular{
+    font-size: 19px;
+}
+.fa_article_letters .fa_time.im-fell-english-regular{
+    font-size: 21px;
+}
 
 .fa_full_article_content p{
     line-height: 30px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: normal;
 }
 
@@ -169,15 +143,15 @@ html, body{
 .fa_full_article_content p,
 .fa_full_article_content tr {
     font-family: 'IM Fell English', serif !important;
-    font-size: 18px !important;
-    line-height: 25px !important;
+    font-size: 22px !important;
+    line-height: 30px !important;
 }
 
 
 .fa_article_letters p.fa_author:hover,
 .fa_article_letters p.fa_author:focus{
     color: lightgray;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -198,13 +172,13 @@ html, body{
         padding-top: 18px;
         margin-top: 15px;
         display: grid;
-        grid-template-columns: 3fr 4fr;
-        grid-column-gap: 20px;
+        grid-template-columns: 1fr; 
+        grid-column-gap: 20px; 
         grid-template-areas:
             "letters letters"
             "image image"; 
         background-color: black;
-        min-height: 80vh;
+        min-height: 95vh;
     } 
     .fa_article_letters{
         background-color: black;
@@ -221,13 +195,10 @@ html, body{
     }
 
     .fa_image{
-        /* margin-right: 20px;
-        margin-left: auto; */
         grid-area: image;
         margin: 0 auto;
         width: 100%;
-        height: 100%;
-        min-height: 700px; 
+        min-height: 750px;   
         background-size: cover; 
         background-position: center; 
         border-radius: 8px;
@@ -245,13 +216,14 @@ html, body{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 20px;
+        font-size: 30px;
         margin-top: 0;
         margin-bottom: 0;
     }
 
     .fa_article_letters .fa_author{
         margin-bottom: 0;
+        font-size: large;
     }
     .fa_full_article_content{
         margin-top: auto;
@@ -265,31 +237,38 @@ html, body{
     .fa_full_article_content .fa_main_content{
         padding-top: 0;
         line-height: 3.5;
+        font-size: 12px;
     }
-    
+
+    p.fa_main_content.im-fell-english-regular {
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    .fa_main_content.im-fell-english-regular p {
+        font-size: 15px;
+        line-height: 1.5em;
+        /* font-family: 'IM Fell English', serif; */
+    }
+     
 }
 
 
-
-
-@media (max-width: 810px){
-
+@media (max-width: 860px){
     #fa_article_content{
-        padding-top: 18px;
+        padding-top: 50px;
         margin-top: 15px;
         display: grid;
-        grid-template-columns: 3fr 4fr;
-        grid-column-gap: 20px;
+        grid-template-columns: 1fr; 
+        grid-column-gap: 20px; 
         grid-template-areas:
             "letters letters"
             "image image"; 
         background-color: black;
-        min-height: 60vh;
     } 
     .fa_article_letters{
-        list-style-type: none;
         background-color: black;
-        margin: 0 auto;
+        margin: 10px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -297,19 +276,17 @@ html, body{
         grid-area: letters;
         /* margin-left: auto;*/
         height: auto;
-        width: 90%; 
-        color: white;
-        padding-left: 5px;
-        padding-right: 5px;
-        /* border: 2px solid white; */
+        width: 95%; 
     }
-
     .fa_image{
+        /* margin-right: 20px;
+        margin-left: auto; */
         grid-area: image;
         margin: 0 auto;
         width: 100%;
-        height: 100%;
-        min-height: 450px; 
+        /* min-height: 100%; */
+        /* min-height: 615px;   */
+        height: 65vh;
         background-size: cover; 
         background-position: center; 
         border-radius: 8px;
@@ -326,8 +303,250 @@ html, body{
     .fa_full_article_content .fa_main_content{
         padding-top: 0;
     }
+
+    p.fa_main_content.im-fell-english-regular {
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+
+    .fa_main_content.im-fell-english-regular p {
+        font-size: 15px;
+        line-height: 1.5em;
+        /* font-family: 'IM Fell English', serif; */
+    }
+
+} 
+
+@media (max-width: 700px){     
+    #fa_article_content{
+        padding-top: 18px;
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-column-gap: 20px; 
+        grid-template-areas:
+            "letters letters"
+            "image image"; 
+        background-color: black;
+    } 
+    .fa_article_letters{
+        background-color: black;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: letters;
+        /* margin-left: auto;*/
+        height: auto;
+        width: 95%; 
+    }
+    .fa_image{
+        /* margin-right: 20px;
+        margin-left: auto; */
+        grid-area: image;
+        margin: 0 auto;
+        width: 100%;
+        /* min-height: 100%; */
+        min-height: 610px;  
+        background-size: cover; 
+        background-position: center; 
+        border-radius: 8px;
+    }
+
+    .fa_main_content.im-fell-english-regular p {
+        font-size: 15px;
+        line-height: 1.5em;
+        /* font-family: 'IM Fell English', serif; */
+    }
+
+   
+    /* p.fa_main_content.im-fell-english-regular {
+        font-size: 12px;
+        line-height: 1.5em;
+    } */
+/* 
+    p.fa_main_content.im-fell-english-regular {
+        font-size: 15px;
+        line-height: 1.5em;
+    } */
+
 }
 
+
+@media (max-width: 599px){
+    #fa_article_content{
+        padding-top: 18px;
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-column-gap: 20px; 
+        grid-template-areas:
+            "letters letters"
+            "image image"; 
+        background-color: black;
+    } 
+    .fa_article_letters{
+        background-color: black;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: letters;
+        height: auto;
+        width: 95%; 
+    }
+
+    .fa_image{
+        grid-area: image;
+        margin: 0 auto;
+        width: 100%;
+        min-height: 590px;  
+        background-size: cover; 
+        background-position: center; 
+        border-radius: 8px;
+    }
+
+    .fa_article_letters .fa_title_ {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* font-size: 30px; */
+        /* font-weight: 500; */
+    }
+    
+    .fa_article_letters .fa_excerpt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .fa_article_letters .fa_author{
+        margin-bottom: 0;
+    }
+    .fa_full_article_content{
+        margin-top: auto;
+        padding-top: auto;
+        margin-left: 2%;
+        margin-right: 2%; 
+        padding-bottom: 50px;
+        line-height: 3.5;
+        /* font-size: 15px; */
+    }
+
+    .fa_article_letters h2.germania-one-regular {
+        font-family: "Germania One", system-ui;
+        font-weight: 900;
+        font-size: 35px;
+    }
+    
+    .fa_article_letters .fa_excerpt.h2.im-fell-english-regular{
+        font-family: "IM Fell English", serif;
+        font-size: 20px; /* Adjust the font size as needed */
+    }
+
+    /* p.fa_main_content.im-fell-english-regular {
+        font-size: 12px;
+        line-height: 1.5em;
+    } */
+
+    .fa_main_content.im-fell-english-regular p {
+        font-size: 15px;
+        line-height: 1.5em;
+        /* font-family: 'IM Fell English', serif; */
+    }
+
+    .fa_main_content.im-fell-english-regular p {
+        font-size: 15px;
+        line-height: 1.5em;
+        /* font-family: 'IM Fell English', serif; */
+    }
+
+} 
+
+@media (max-width: 499px){
+    #fa_article_content{
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "letters letters"
+            "image image"; 
+        padding: 25px 20px;
+        background-color: black;
+        margin-top: 0;
+        width: 100%;
+    } 
+
+    .fa_image{
+        width: 100%;
+        min-height: 550px;
+    }
+
+    .fa_article_letters .fa_title_.germania-one-regular{
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .fa_article_letters .fa_excerpt.im-fell-english-regular{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        font-size: 17px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .fa_full_article_content {
+        margin-top: auto;
+        padding-top: auto;
+        margin-left: 2.7%;
+        margin-right: 2.5%;
+        padding-bottom: 50px;
+        
+    }
+
+
+    p.fa_main_content.im-fell-english-regular{
+        padding-top: 0;
+        padding-left: 1px;
+        padding-right: 5px;
+    }  
+
+    /* p.fa_main_content.im-fell-english-regular {
+        font-size: 14px;
+        line-height: 12px;
+    } */
+
+    p.fa_main_content.im-fell-english-regular {
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+
+    
+    .fa_main_content.im-fell-english-regular p {
+        font-size: 12px;
+        line-height: 1.5em;
+        /* font-family: 'IM Fell English', serif; */
+    }
+/* 
+    #fa_sidebar #fa_advertisement::empty{
+        border: 3px solid greenyellow;
+        min-height: 25vh;
+        height: auto;
+        min-width: 95%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+    }
+     */
+
+}
 
 
 /* working on the sidebars for advertisement*/
