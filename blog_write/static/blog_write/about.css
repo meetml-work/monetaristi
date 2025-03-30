@@ -1,11 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body{
     overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 html *::selection{
     background-color: rgb(20, 254, 254);
     color: black; 
 }
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
 
 .introduction{
     border: 2px black;
@@ -26,10 +46,25 @@ html *::selection{
 }
 
 .contact{
-    position: fixed;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    list-style-type: None;
     width: 100%;
-    /* Additional styling */
+    text-align: center;
+    padding: 70px 0;
+    height: auto;
+}
+
+.contact p{
+    margin: 0 0;
+} 
+
+footer {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -41,6 +76,16 @@ html *::selection{
         margin-left: 20%;
         margin-bottom: 30%;
     } 
+    .une_jam{
+        border: 2px black;
+        font-size: 10px;
+        line-height: 30px;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+    
 }
 
 @media (max-width: 1350px) {
@@ -48,8 +93,14 @@ html *::selection{
         margin-top: 5%;
         margin-right: 20%;
         margin-left: 20%;
-        margin-bottom: 35%;
+        margin-bottom: 20%;
     } 
+
+    .contact {
+        padding: 60px 0;
+    }
+    
+
 }
 
 
@@ -58,7 +109,7 @@ html *::selection{
         margin-top: 5%;
         margin-right: 20%;
         margin-left: 20%;
-        margin-bottom: 43%;
+        margin-bottom: 20%;
     } 
 }
 
@@ -68,18 +119,31 @@ html *::selection{
         margin-top: 9%;
         margin-right: 20%;
         margin-left: 20%;
-        margin-bottom: 42%;
+        margin-bottom: 20%;
     } 
+
+    .une_jam p {
+        line-height: 20px;
+    }
+
 }
 
 
 @media (max-width: 700px){     
     .introduction{
         margin-top: 9%;
-        margin-right: 20%;
-        margin-left: 20%;
-        margin-bottom: 42%;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-bottom: 20%;
     } 
+    .une_jam p {
+        line-height: 20px;
+    }
+
+
+    .contact {
+        padding: 50px 0;
+    }
 
 }
 
@@ -87,19 +151,43 @@ html *::selection{
 @media (max-width: 599px){
     .introduction{
         margin-top: 9%;
-        margin-right: 10%;
-        margin-left: 10%;
-        margin-bottom: 45%;
+        margin-right: 4%;
+        margin-left: 4%;
+        margin-bottom: 25%;
     } 
+
+    .une_jam p{
+        line-height: 25px;
+    }
+
+}
+    
+@media (max-width: 550px){
+        .introduction{
+            margin-top: 9%;
+            margin-right: 4%;
+            margin-left: 4%;
+            margin-bottom: 25%;
+        } 
+    
+        .une_jam p{
+            font-size: 10px;
+            line-height: 25px;
+        }
+
 }
 
 
 @media (max-width: 499px){
     .introduction{
-        margin-top: 9%;
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-top: 12%;
+        margin-right: 3%;
+        margin-left: 3%;
         margin-bottom: 45%;
     } 
+
+    .une_jam p{
+        line-height: 25px;
+    }
 
 }
