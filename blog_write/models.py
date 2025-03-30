@@ -38,7 +38,7 @@ class Author(models.Model):
 # Your Articles model
 class Articles(TimestampedModel):
     title = models.CharField(max_length=200)
-    excerpt = models.CharField(max_length=170, null=True)
+    excerpt = models.CharField(max_length=250, null=True)
     image = models.ImageField(upload_to="images")
     slug = models.SlugField(unique=True, db_index=True)
     content = models.TextField()
