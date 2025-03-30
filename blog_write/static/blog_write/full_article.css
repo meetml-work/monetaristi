@@ -131,11 +131,20 @@ html, body{
     font-size: 21px;
 }
 
-.fa_full_article_content p{
+/* .fa_full_article_content p{
     line-height: 30px;
     font-size: 30px;
     font-weight: normal;
-}
+} */
+
+/* .fa_full_article_content p {
+    font-size: 16px !important;
+    line-height: 1.5em;
+    padding: 0;
+    margin-bottom: 12px;
+    color: #131f49;
+    font-family: Helvetica, sans-serif;
+} */
 
 .fa_full_article_content, 
 .fa_full_article_content *, 
@@ -143,7 +152,7 @@ html, body{
 .fa_full_article_content p,
 .fa_full_article_content tr {
     font-family: 'IM Fell English', serif !important;
-    font-size: 22px !important;
+    font-size: 18px !important;
     line-height: 30px !important;
 }
 
@@ -234,7 +243,16 @@ html, body{
         line-height: 3.5;
     }
 
-    .fa_full_article_content .fa_main_content{
+    .fa_full_article_content p {
+        font-size: 16px !important;
+        line-height: 1.5em;
+        padding: 0;
+        margin-bottom: 12px;
+        color: #131f49;
+        font-family: Helvetica, sans-serif;
+    }
+
+    /* .fa_full_article_content .fa_main_content{
         padding-top: 0;
         line-height: 3.5;
         font-size: 12px;
@@ -248,8 +266,7 @@ html, body{
     .fa_main_content.im-fell-english-regular p {
         font-size: 15px;
         line-height: 1.5em;
-        /* font-family: 'IM Fell English', serif; */
-    }
+    } */
      
 }
 
@@ -300,7 +317,16 @@ html, body{
         padding-bottom: 50px;
     }
 
-    .fa_full_article_content .fa_main_content{
+    .fa_full_article_content p {
+        font-size: 15px !important;
+        line-height: 1.5em;
+        padding: 0;
+        margin-bottom: 12px;
+        color: #131f49;
+        font-family: Helvetica, sans-serif;
+    }
+
+    /* .fa_full_article_content .fa_main_content{
         padding-top: 0;
     }
 
@@ -313,7 +339,7 @@ html, body{
         font-size: 15px;
         line-height: 1.5em;
         /* font-family: 'IM Fell English', serif; */
-    }
+    } */
 
 } 
 
@@ -354,11 +380,20 @@ html, body{
         border-radius: 8px;
     }
 
-    .fa_main_content.im-fell-english-regular p {
+    /* .fa_main_content.im-fell-english-regular p {
         font-size: 15px;
         line-height: 1.5em;
-        /* font-family: 'IM Fell English', serif; */
+    } */
+
+    .fa_full_article_content p {
+        font-size: 15px !important;
+        line-height: 1.5em;
+        padding: 0;
+        margin-bottom: 12px;
+        color: #131f49;
+        font-family: Helvetica, sans-serif;
     }
+
 
    
     /* p.fa_main_content.im-fell-english-regular {
@@ -450,22 +485,17 @@ html, body{
         font-size: 20px; /* Adjust the font size as needed */
     }
 
-    /* p.fa_main_content.im-fell-english-regular {
-        font-size: 12px;
-        line-height: 1.5em;
-    } */
 
-    .fa_main_content.im-fell-english-regular p {
-        font-size: 15px;
+
+    .fa_full_article_content p {
+        font-size: 15px !important;
         line-height: 1.5em;
-        /* font-family: 'IM Fell English', serif; */
+        padding: 0;
+        margin-bottom: 12px;
+        color: #131f49;
+        font-family: Helvetica, sans-serif;
     }
 
-    .fa_main_content.im-fell-english-regular p {
-        font-size: 15px;
-        line-height: 1.5em;
-        /* font-family: 'IM Fell English', serif; */
-    }
 
 } 
 
@@ -512,7 +542,7 @@ html, body{
     }
 
     .fa_full_article_content p {
-        font-size: 16px !important;
+        font-size: 15px !important;
         line-height: 1.5em;
         padding: 0;
         margin-bottom: 12px;
