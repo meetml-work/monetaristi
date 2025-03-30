@@ -469,6 +469,8 @@ html, body{
 
 } 
 
+
+
 @media (max-width: 499px){
     #fa_article_content{
         box-sizing: border-box;
@@ -504,37 +506,51 @@ html, body{
     }
 
     .fa_full_article_content {
-        margin-top: auto;
-        padding-top: auto;
-        margin-left: 2.7%;
-        margin-right: 2.5%;
-        padding-bottom: 50px;
-        
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
     }
 
+    .fa_full_article_content p {
+        font-size: 16px !important;
+        line-height: 1.5em;
+        padding: 0;
+        margin-bottom: 12px;
+        color: #131f49;
+        font-family: Helvetica, sans-serif;
+    }
 
+/* 
     p.fa_main_content.im-fell-english-regular{
         padding-top: 0;
         padding-left: 1px;
-        padding-right: 5px;
-    }  
-
-    /* p.fa_main_content.im-fell-english-regular {
-        font-size: 14px;
-        line-height: 12px;
-    } */
+        padding-right: 25px;
+    }   
 
     p.fa_main_content.im-fell-english-regular {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 12px;
+    } 
+
+    p.fa_main_content.im-fell-english-regular {
+        font-size: 10px;
         line-height: 1.5em;
     }
 
     
     .fa_main_content.im-fell-english-regular p {
-        font-size: 12px;
+        font-size: 5px !important;
         line-height: 1.5em;
-        /* font-family: 'IM Fell English', serif; */
-    }
+        
+    } 
+
+    .fa_main_content.im-fell-english-regular {
+        font-size: 8px;
+        line-height: 1.6em;
+    } */
+
+
+
 /* 
     #fa_sidebar #fa_advertisement::empty{
         border: 3px solid greenyellow;

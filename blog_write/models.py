@@ -4,6 +4,7 @@ from datetime import timedelta
 #from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from django.conf import settings
+from blog_write.utils import clean_word_html
 
 
 # Create your models here.
@@ -49,9 +50,10 @@ class Articles(TimestampedModel):
     def save(self, *args, **kwargs):
         if len(self.excerpt) >= 170:
             self.excerpt = self.excerpt[:170]+"..."
+        if self.content:
+            self.content = clean_word_html(self.content)
         super().save(*args, **kwargs)
         
-    
     class Meta:
         verbose_name = "Article"
         
