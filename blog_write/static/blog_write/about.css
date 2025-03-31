@@ -21,10 +21,10 @@ html *::selection{
     color: black; 
 }
 
-footer {
+/* footer {
     margin: 0;
     padding: 0;
-}
+} */
 
 
 .introduction{
