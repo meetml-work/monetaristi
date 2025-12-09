@@ -8,15 +8,21 @@ ENV PYTHONUNBUFFERED 1
 # Set work directory
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install -r requirements.txt
+# Install system dependencies for PostgreSQL support
+RUN apt-get update && apt-get install -y build-essential libpq-dev && apt-get clean
 
-# Copy the entire project
+# Install Python dependencies
+COPY requirements.txt /app/
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+# Copy the entire Django project
 COPY . /app/
 
-# Expose port Django runs on inside the container
+# Collect static files for production
+RUN python manage.py collectstatic --noinput
+
+# Expose port
 EXPOSE 8000
 
-# Run the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Run Django using Gunicorn (production server)
+CMD ["gunicorn", "blog.wsgi:application", "--bind", "0.0.0.0:8000"]

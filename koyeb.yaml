@@ -1,0 +1,19 @@
+services:
+  - name: monetaristi
+    type: web
+    env: docker
+    plan: free
+    branch: main
+    region: frankfurt
+
+    
+    buildCommand: ""
+
+    startCommand: >
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      gunicorn blog.wsgi:application --bind 0.0.0.0:8000
+
+    routes:
+      - path: /
+        port: 8000

@@ -57,7 +57,6 @@ class Articles(TimestampedModel):
     class Meta:
         verbose_name = "Article"
         
-      
 class Biography(models.Model):
     ContentBiography = models.TextField()
     
@@ -71,11 +70,13 @@ class VerifiedUser(models.Model):
     def __str__(self):
         return self.user
   
-
 class ClickLog(models.Model):
     ip_address = models.CharField(max_length=50)
     url = models.CharField(max_length=2048)
     timestamp = models.DateTimeField(auto_now_add=True)
     click_by_type = models.CharField(max_length=100, help_text="Type of click: Article, Template, etc.")
+    
+    
+    
     
     
