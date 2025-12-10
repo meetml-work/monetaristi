@@ -124,12 +124,22 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 #         'NAME': BASE_DIR / "db.sqlite3",
 #     }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
+DATABASES = {}
+
+db_url = os.getenv("DATABASE_URL")
+
+if db_url:
+    DATABASES['default'] = dj_database_url.config(
+        default=db_url,
+        conn_max_age=600,
+        ssl_require=False,   # MUST BE FALSE for sqlite
+    )
+else:
+    DATABASES['default'] = {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
-}
+
 
 
 
