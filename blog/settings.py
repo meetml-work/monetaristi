@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-import dj_database_url
 from pathlib import Path
 from os import getenv
 import os
@@ -30,8 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
+SECRET_KEY='django-insecure-66lvkqz-ff-6ffoh#$476=ddk*vq55jab(k(m$(^se+s1y%#@%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 print("DEBUG VALUE:", DEBUG)
@@ -50,7 +50,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://www.monetaristi.com",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    "agi1.pythonanywhere.com"
+    "https://agi1.pythonanywhere.com"
 ]
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
@@ -102,27 +102,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-# }
-
-# DATABASES = {}
-
-# if os.getenv("DATABASE_URL"):
-#     DATABASES['default'] = dj_database_url.config(
-#         default=os.getenv("DATABASE_URL"),
-#         conn_max_age=600,
-#         ssl_require=True,
-#     )
-# else:
-#     DATABASES['default'] = {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / "db.sqlite3",
-#     }
 
 # Remove all the dj_database_url complexity, just use:
 DATABASES = {
@@ -214,6 +193,3 @@ LOGGING = {
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-
-DEBUG = True
-ALLOWED_HOSTS = ['*']
