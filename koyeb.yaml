@@ -1,7 +1,7 @@
 services:
- - name: monetaristi
+  - name: monetaristi
     type: web
-    env: docker
+    env: buildpack  # ← Changed from "docker" to "buildpack"
     plan: free
     branch: main
     region: frankfurt
