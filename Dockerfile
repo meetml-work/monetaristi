@@ -1,4 +1,5 @@
 # Base image
+# Base image
 FROM python:3.11-slim
 
 # Set environment variables
@@ -24,5 +25,5 @@ RUN python manage.py collectstatic --noinput
 # Expose port
 EXPOSE 8000
 
-# Run Django using Gunicorn (production server)
-CMD ["gunicorn", "blog.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Run migrations then start gunicorn
+CMD python manage.py migrate && gunicorn blog.wsgi:application --bind 0.0.0.0:$PORT
