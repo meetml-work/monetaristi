@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     ".koyeb.app",
+    "yelping-vivian-sabihatechnology-ac8f113a.koyeb.app"
 ]
 
 # Optional override from environment:
