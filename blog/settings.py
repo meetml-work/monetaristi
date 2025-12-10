@@ -39,8 +39,7 @@ print("DEBUG VALUE:", DEBUG)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    ".koyeb.app",
-    "yelping-vivian-sabihatechnology-ac8f113a.koyeb.app"
+    "agi1.pythonanywhere.com",
 ]
 
 # Optional override from environment:
@@ -51,6 +50,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://www.monetaristi.com",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    "agi1.pythonanywhere.com"
 ]
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
@@ -124,23 +124,13 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 #         'NAME': BASE_DIR / "db.sqlite3",
 #     }
 
-DATABASES = {}
-
-db_url = os.getenv("DATABASE_URL")
-
-if db_url:
-    DATABASES['default'] = dj_database_url.config(
-        default=db_url,
-        conn_max_age=600,
-        ssl_require=False,   # MUST BE FALSE for sqlite
-    )
-else:
-    DATABASES['default'] = {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+# Remove all the dj_database_url complexity, just use:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-
-
+}
 
 
 # Password validation
